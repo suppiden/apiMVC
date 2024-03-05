@@ -1,0 +1,58 @@
+###Recuperar peliculas
+
+GET http://localhost:1234/movies
+
+###Encontrar batman
+
+GET http://localhost:1234/movies/batman
+
+###Encontrar genero
+
+GET http://localhost:1234/movies?genre=Sci-fi
+
+###meter pelicula
+
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "blabla": "blabla",
+  "pelicula": "yokstio",
+  "title": "yokse",
+    "year": 1999,
+    "director": "Lana Wachowski",
+    "duration": 136,
+    "poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
+    "genre": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "rate": 8.7
+  
+}
+
+
+###meter invalido
+
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+ 
+  "title": 1,
+    "year": "pepotee"
+    
+  
+}
+
+
+###Borrar una pelicula
+DELETE http://localhost:1234/movies/batman
+### Actualizar una película
+PATCH http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+Content-Type: application/json
+
+{
+  "title": "jaja",
+  "year": 2020
+}
